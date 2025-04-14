@@ -58,7 +58,7 @@ const ParentComponent = () => {
             </div>
             <button
                 onClick={handleButtonClick}
-                className="w-max border border-black px-4 py-2 hover:bg-black hover:text-white text-xs"
+                className="w-max border border-black px-4 py-2 hover:bg-black hover:text-white text-xs transition-colors duration-300 ease-in-out"
             >
                 RUN
             </button>
@@ -69,7 +69,7 @@ const ParentComponent = () => {
                         type="text"
                         value={resultPath}
                         onChange={handlePathChange}
-                        className="text-black/50 py-2 w-full text-xs font-normal focus:outline-none hover:border-b focus:border-b border-gray-400"
+                        className="text-black/50 py-2 w-full text-xs font-normal focus:outline-none hover:border-b focus:border-b border-black/50 transition-all duration-300 ease-in-out"
                     />
                 </div>
             </div>
