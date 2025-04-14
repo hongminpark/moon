@@ -9,7 +9,11 @@ const ParentComponent = () => {
 
     useEffect(() => {
         if (original.path) {
-            setResultPath(`${original.path}/selected`);
+            // Get parent directory path and add "/selected"
+            const pathParts = original.path.split('/');
+            pathParts.pop(); // Remove the last part
+            const parentPath = pathParts.join('/');
+            setResultPath(`${parentPath}/selected`);
         }
     }, [original.path]);
 
@@ -54,7 +58,7 @@ const ParentComponent = () => {
             </div>
             <button
                 onClick={handleButtonClick}
-                className="w-max border border-black px-4 py-2 hover:bg-gray-900 hover:text-white text-xs"
+                className="w-max border border-black px-4 py-2 hover:bg-black hover:text-white text-xs"
             >
                 RUN
             </button>
@@ -65,7 +69,7 @@ const ParentComponent = () => {
                         type="text"
                         value={resultPath}
                         onChange={handlePathChange}
-                        className="text-gray-500 py-2 w-full text-xs font-normal focus:outline-none hover:border-b focus:border-b border-gray-400"
+                        className="text-black/50 py-2 w-full text-xs font-normal focus:outline-none hover:border-b focus:border-b border-gray-400"
                     />
                 </div>
             </div>

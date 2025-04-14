@@ -35,7 +35,7 @@ const DragDrop = ({ folderInfo, onDrop }) => {
 
     return (
         <div
-            className={`border border-dashed p-4 text-center text-xs border-gray-500 font-normal ${
+            className={`border border-dashed p-4 rounded-md text-center text-xs font-normal ${
                 isDragging ? "bg-black text-white border-white" : ""
             }`}
             onDragOver={handleDragOver}
